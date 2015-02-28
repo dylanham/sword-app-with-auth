@@ -1,0 +1,15 @@
+%h1 List of Swords
+= link_to 'New Sword', new_sword_path
+%hr
+- @swords.each do |sword|
+  %p
+    Name
+    = link_to sword.name, sword_path(sword)
+  %p
+    Style
+    = sword.style
+  %p
+    User:
+    = sword.user.email
+  = link_to 'edit', edit_sword_path(sword)
+  = link_to 'delete', sword_path(sword), method: :delete

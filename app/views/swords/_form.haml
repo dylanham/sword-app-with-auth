@@ -1,0 +1,9 @@
+= form_for @sword do |f|
+  = f.label :name
+  = f.text_field :name
+  .div
+    = f.label :style
+    = f.text_field :style
+  .div
+    = f.submit
+= link_to 'back', swords_path
